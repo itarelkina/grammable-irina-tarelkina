@@ -3,25 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
-# credential manager
-gem 'figaro'
-# aws image uploader
-gem 'fog-aws'
-# image uploader
-gem 'carrierwave', '~> 1.2.3'
-# user authentication and management
-gem 'devise', '~> 4.5.0'
-# form submission
-gem 'simple_form', '~> 4.1.0'
-# bootstrap
-gem 'bootstrap', '4.0.0.alpha6'
-# bootstrap dependency
-gem 'jquery-rails'
-gem 'popper_js', '~> 1.11.1'
-gem 'jquery-ui-rails'
-gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -56,8 +39,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 3.5'
-  gem "factory_bot_rails"
 end
 
 group :development do
@@ -80,6 +61,29 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# rspec gem for test driven development
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_bot_rails'
+end
+
+# add jquery-rails -  needed for bootstrap gem and for jquery code dev
+gem 'jquery-rails'
+
+# add popper and bootstrap gems
+gem 'popper_js', '~> 1.11.1'
+gem 'bootstrap', '4.0.0.alpha6'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+# time to add simple_form
+gem 'simple_form'
+# user security gem installation
+gem 'devise'
+# image uploader
+gem 'carrierwave', '~> 1.2.3'
+# aws image uploader
+gem 'fog-aws'
+# credential manager
+gem 'figaro'
