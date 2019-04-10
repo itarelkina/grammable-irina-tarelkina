@@ -7,7 +7,7 @@ FactoryBot.define do
     add_attribute(:password_confirmation) { "secretPassword" }
   end
   factory :gram do
-    message "hello"
+    add_attribute(:message) { "hello" }
     picture { fixture_file_upload(Rails.root.join('spec', 'fixtures', 'picture.png'), 'image/png') }
     association :user
   end
