@@ -87,3 +87,4 @@ gem 'carrierwave', '~> 1.2.3'
 gem 'fog-aws'
 # credential manager
 gem 'figaro'
+gem 'database_cleaner', '0.9.1'
